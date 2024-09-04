@@ -1,0 +1,60 @@
+create database tourandtravel;
+use tourandtravel;
+create table login (username varchar(20),name varchar(20),password varchar(20),securityquestion varchar(20),answer varchar(20));
+select *from login;
+create table customer(username varchar(20),id varchar(30),number varchar(20),name varchar(20),gender varchar(20),country varchar(20),address varchar(60),phone varchar(15),email varchar(50));
+select *from customer;
+CREATE TABLE bookpackage (
+    username VARCHAR(20),
+    id VARCHAR(30),
+    number VARCHAR(20),
+    phone VARCHAR(15),
+    tperson VARCHAR(20),
+    price VARCHAR(500),
+    package VARCHAR(50)
+);
+
+
+
+DROP TABLE IF EXISTS bookpackage;
+
+CREATE TABLE hotels (
+    name VARCHAR(20),
+    costperperson VARCHAR(30),
+    acroom VARCHAR(20),
+    foodinclude VARCHAR(15)
+);
+
+
+
+
+insert into hotels values("JW Marriott Hotel", "7000", "2500", "3000");
+INSERT INTO hotels VALUES ("Four Seasons Hotel", "12000", "1900", "2200");
+INSERT INTO hotels VALUES ("The Ritz-Carlton", "15000", "2000", "2500");
+INSERT INTO hotels VALUES ("Hilton Garden Inn", "8000", "1500", "1800");
+INSERT INTO hotels VALUES ("Marriott Marquis", "11000", "1800", "2100");
+INSERT INTO hotels VALUES ("Hyatt Regency", "9000", "1600", "2000");
+INSERT INTO hotels VALUES ("The Oberoi", "14000", "2100", "2300");
+
+
+
+SELECT * FROM hotels;
+DROP TABLE IF EXISTS hotels;
+create table bookHotel(username varchar(30), name varchar(30), persons varchar(20), days varchar(20), ac varchar(10), food varchar(10), id varchar(30), number varchar(20), phone varchar(20), cost varchar(20));
+SELECT * FROM bookHotel;
+
+
+CREATE TABLE payments (
+    id varchar(50),
+    username VARCHAR(50),
+    payment_method VARCHAR(10),
+    card_number VARCHAR(20),
+    upi_id VARCHAR(50),
+    amount varchar(100),
+    payment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+DROP TABLE IF EXISTS payments;
+select * from payments;
+
+
+
